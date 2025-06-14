@@ -1,0 +1,121 @@
+import React from "react";
+import EventCard from "../cards/EventCard";
+import event1 from "../../assets/event1.png";
+import speaker1 from "../../assets/speaker1.png";
+import speaker2 from "../../assets/speaker2.png";
+import speaker3 from "../../assets/speaker3.png";
+
+const eventsList = [
+  {
+    id: 1,
+    image: event1,
+    title: "Transforming Futures: AI-Driven Seminars & Workshops",
+    date: "25-06-2025",
+    time: "10:00 AM - 11:30 AM",
+    location: "Virtual",
+    speakers: [
+      {
+        name: "Dr. Ananya Mehta",
+        designation: "AI Researcher, Google",
+        photo: speaker1, // make sure this exists in /public or import it
+      },
+      {
+        name: "Rajiv Khanna",
+        designation: "Placement Head, Infosys",
+        photo: speaker2,
+      },
+      {
+        name: "Dr. Ananya Mehta",
+        designation: "AI Researcher, Google",
+        photo: speaker3, // make sure this exists in /public or import it
+      },
+      {
+        name: "Rajiv Khanna",
+        designation: "Placement Head, Infosys",
+        photo: speaker1,
+      },
+    ],
+  },
+  {
+    id: 2,
+    image: event1,
+    title: "Transforming Futures: AI-Driven Seminars & Workshops",
+    date: "28-06-2025",
+    time: "2:00 PM - 3:30 PM",
+    location: "Online",
+    speakers: [
+      {
+        name: "Nidhi Patel",
+        designation: "Career Coach, UpGrad",
+        photo: speaker1,
+      },
+      {
+        name: "Dr. Ananya Mehta",
+        designation: "AI Researcher, Google",
+        photo: speaker2, // make sure this exists in /public or import it
+      },
+      {
+        name: "Rajiv Khanna",
+        designation: "Placement Head, Infosys",
+        photo: speaker3,
+      },
+      {
+        name: "Dr. Ananya Mehta",
+        designation: "AI Researcher, Google",
+        photo: speaker1, // make sure this exists in /public or import it
+      },
+    ],
+  },
+];
+
+const Events = () => {
+  return (
+    <section className="bg-white font-poppins px-4 sm:px-8 md:px-[150px] sm:px-[50px] md:mt-[100px] sm:mt-[50px]">
+      <div className="flex items-center gap-2">
+        <div className="w-[15px] h-[2px] bg-secondary"></div>
+        <h6 className="text-[16px] font-semibold text-black">EVENTS</h6>
+      </div>
+
+      <div className="flex md:items-center md:justify-between mt-[15px] gap-4">
+        <h1 className="w-[550px] text-[24px] font-bold text-black leading-snug max-w-2xl">
+          Transforming Futures: AI-Driven{" "}
+          <span className="text-primary font-bold">Seminars</span> &{" "}
+          <span className="text-primary font-bold">Workshops</span>
+        </h1>
+
+        <button className="hidden md:flex items-center h-12 bg-secondary text-white px-8 py-2 rounded-full text-sm font-bold">
+          EXPLORE OUR EVENTS
+        </button>
+      </div>
+
+      <p className="text-black text-[16px] font-medium text-left mt-[15px] max-w-4xl">
+        Our events are designed to provide unparalleled career development opportunities through AI-driven insights and industry expertise. From interactive workshops and insightful webinars to networking sessions and global education meetups, we bring together top professionals, educators, and aspiring individuals to exchange knowledge and unlock new possibilities.
+        <br /><br />
+        Stay connected and join us in shaping the future of career success!
+      </p>
+
+      <div className="grid grid-cols-1 gap-4 mt-[50px]">
+        {eventsList.map((event) => (
+          <EventCard
+            key={event.id}
+            image={event.image}
+            title={event.title}
+            date={event.date}
+            time={event.time}
+            location={event.location}
+            speakers={event.speakers}
+          />
+        ))}
+      </div>
+
+      <div className="flex justify-center mt-8 md:hidden">
+        <button className="h-12 bg-secondary text-white px-8 py-2 rounded-full text-sm font-bold items-center">
+          EXPLORE OUR EVENTS
+        </button>
+      </div>
+
+    </section>
+  );
+};
+
+export default Events;

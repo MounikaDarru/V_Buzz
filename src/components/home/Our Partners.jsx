@@ -7,7 +7,7 @@ import partner3 from '../../assets/partner3.png'
 const OurPartners = () => {
     return(
         <section className="bg-white font-poppins px-4 sm:px-8 md:px-[150px] sm:px-[50px] md:mt-[100px] sm:mt-[50px] md:mb-[100px] sm:mb-[50px]">
-            <div className="md:flex md:items-center md:gap-[50px] sm:flex sm:flex-col sm:gap-[30px]">
+            <div className="md:flex md:flex-row md:items-center md:gap-[50px] sm:flex sm:flex-col sm:gap-[30px]">
                 <div className="flex flex-col gap-4 md:w-[450px] md:w-[550px] md:items-start sm:items-center sm:mt-[30px]">
                     <div className="flex items-center gap-2">
                         <div className="w-[15px] h-[2px] bg-secondary"></div>

@@ -14,7 +14,7 @@ const EventCard = ({ image, title, date, time, location, speakers = [] }) => {
         />
       </div>
 
-      <div className="flex md:flex-row sm:flex-col shadow-custom-nav p-[30px] rounded-[20px] md:h-[200px] md:w-[925px] lg:w-[1000px] sm:w-[400px] sm:h-[260px]">
+      <div className="flex md:flex-row sm:flex-col shadow-custom-nav p-[30px] rounded-[20px] md:h-[200px] lg:w-[1000px] sm:w-[400px] sm:h-[260px]">
         {/*Title and date and time and location */}
         <div>
           <div className="flex flex-row gap-8 md:w-[380px] sm:w-[320px] h-[30px] items-center border border-primary p-4 rounded-full">
@@ -34,7 +34,7 @@ const EventCard = ({ image, title, date, time, location, speakers = [] }) => {
             <span className="text-black font-medium md:text-[16px] sm:text-[12px]">{location}</span> 
           </div>
         </div>
-        <div className="md:w-[2px] md:h-[150px] sm:w-[340px] sm:h-[2px] bg-black/10 md:ml-[150px] sm:mt-[10px]"></div>
+        <div className="md:w-[2px] md:h-[150px] sm:w-[340px] sm:h-[2px] bg-black/10 md:mt-[10px] md:ml-[80px] sm:mt-[10px]"></div>
         {/*Register and speakers */}
         <div className="flex md:flex-col sm:flex-row sm:ml-[24px] md:py-[15px] sm:mt-[15px] ">
           <button className="border border-primary text-primary md:px-8 md:py-2 rounded-full md:text-[16px] sm:text-[12px] sm:px-6 sm:py-2 font-bold self-start md:self-auto">

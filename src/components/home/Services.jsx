@@ -107,7 +107,7 @@ const Services = () => {
 
         <div className="flex justify-center md:mt-[50px] sm:mt-[30px]">
           <button className="h-12 bg-secondary hover:bg-secondary-dark text-white px-8 py-2 rounded-full text-sm font-bold transition-colors duration-200">
-            EXPLORE OUR EVENTS
+            EXPLORE OUR SERVICES
           </button>
         </div>
       </div>

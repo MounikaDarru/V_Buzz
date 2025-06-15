@@ -8,11 +8,20 @@ body {
 
 @layer utilities {
   .hide-scrollbar {
+<<<<<<< HEAD
     -ms-overflow-style: none; /* IE/Edge */
     scrollbar-width: none;    /* Firefox */
   }
 
   .hide-scrollbar::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
+=======
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+>>>>>>> e18508631ccc3ca5d2efc71d371544eac1f3337c
   }
 }

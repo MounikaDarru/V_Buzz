@@ -34,7 +34,11 @@ const EventCard = ({ image, title, date, time, location, speakers = [] }) => {
             <span className="text-black font-medium md:text-[16px] sm:text-[12px]">{location}</span> 
           </div>
         </div>
+<<<<<<< HEAD
         <div className="md:w-[2px] md:h-[150px] sm:w-[340px] sm:h-[2px] bg-black/10 md:mt-[10px] md:ml-[80px] sm:mt-[10px]"></div>
+=======
+        <div className="md:w-[2px] md:h-[140px] sm:w-[340px] sm:h-[2px] bg-black/10 md:mt-1 md:ml-[150px] sm:mt-[10px]"></div>
+>>>>>>> e18508631ccc3ca5d2efc71d371544eac1f3337c
         {/*Register and speakers */}
         <div className="flex md:flex-col sm:flex-row sm:ml-[24px] md:py-[15px] sm:mt-[15px] ">
           <button className="border border-primary text-primary md:px-8 md:py-2 rounded-full md:text-[16px] sm:text-[12px] sm:px-6 sm:py-2 font-bold self-start md:self-auto">

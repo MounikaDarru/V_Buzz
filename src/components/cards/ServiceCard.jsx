@@ -2,7 +2,7 @@ import React from "react";
 
 const ServiceCard = ({ image, icon, title, description, features}) => {
     return (
-        <div className="flex flex-col items-left bg-white rounded-[20px] md:w-[480px] md:h-[600px] shadow-custom-nav sm:w-[290px] sm:h-[450px] sm:gap-[15px]">
+        <div className="flex flex-col items-left bg-white rounded-[20px] md:w-[480px] md:h-[600px] shadow-custom-nav sm:w-[350px] sm:h-[500px] sm:gap-[15px]">
             {/* image and icon */}
             <div className="md:h-[300px]">
                 <img src={image} alt={title} className="md:rounded-tl-[200px] md:h-[265px] sm:rounded-tl-[150px]" />
@@ -10,7 +10,7 @@ const ServiceCard = ({ image, icon, title, description, features}) => {
             </div>
 
             {/* Title and description */}
-            <div className="md:px-[30px] md:w-[420px] sm:px-[24px] sm:w-[290px]">
+            <div className="md:px-[30px] md:w-[420px] sm:px-[24px] sm:w-[350px]">
                 <h1 className="text-[16px] font-bold">{title}</h1>
                 <p className="text-[16px] font-medium">{description}</p>
                 <p className="line-clamp-4 text-sm text-black whitespace-pre-line md:ml-4 sm:ml-2">

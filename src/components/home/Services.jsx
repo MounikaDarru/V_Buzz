@@ -89,8 +89,8 @@ const Services = () => {
           Our Promise :  With AI-driven insights, industry expertise, and a commitment to excellence, we empower individuals to achieve their career aspirations and unlock new opportunities globally.
         </p>
 
-        <div className="w-full md:overflow-x-auto hide-scrollbar">
-            <div className="md:flex md:flex-row sm:grid sm:grid-cols-2 md:gap-x-[30px] sm:gap-x-[20px] sm:gap-y-[20px] mt-[50px]">
+        <div className="w-full overflow-x-auto hide-scrollbar">
+            <div className="flex flex-row md:gap-x-[30px] sm:gap-x-[20px] sm:gap-y-[20px] mt-[50px]">
                 {servicesList.map((service) => (
                 <ServiceCard
                     key={service.id}

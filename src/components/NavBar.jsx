@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+// 
+
+
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -13,9 +17,24 @@ const Header = () => {
     { name: "Login", path: "/login" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-12 z-50 w-full font-poppins">
-      <div className="mx-4 sm:mx-[50px] md:mx-[150px] bg-white rounded-xl shadow-custom-nav px-6 sm:px-8 lg:px-12 flex items-center justify-between h-16">
+    <header className={`fixed top-0 z-50 w-full font-poppins transition-all duration-300 ${scrolled ? "bg-white top-0 shadow-md" : ""}`}>
+      <div
+        className={`transition-all duration-300 ${
+          scrolled
+            ? "mx-0 rounded-none sm:px-[50px] md:px-[150px] top-0"
+            : "mx-4 sm:mx-[50px] md:mx-[150px] mt-[50px] rounded-xl px-6 sm:px-8 lg:px-12"
+        } bg-white shadow-custom-nav flex items-center justify-between h-16`}
+      >
         <div className="flex items-center gap-4">
           <img src={logo} alt="Logo" className="h-10 w-auto" />
         </div>
@@ -52,7 +71,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-28 left-4 right-4 sm:left-[30px] sm:right-[30px] bg-white rounded-xl shadow-custom-nav px-4 py-4 space-y-3 font-poppins">
+        <div className="absolute top-16 left-4 right-4 sm:left-[30px] sm:right-[30px] bg-white rounded-xl shadow-custom-nav px-4 py-4 space-y-3 font-poppins">
           {navLinks.map((link) => (
             <Link
               key={link.name}

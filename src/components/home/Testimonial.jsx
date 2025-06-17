@@ -129,6 +129,12 @@ const Testimonial = () => {
                 <p className="text-black text-[16px] font-medium text-left mt-4 w-full">
                 Discover how AI technology and expert mentorship have transformed careers and unlocked new opportunities. From students launching successful careers to professionals advancing in their industries, these testimonials showcase the power of innovation and personalized support. Hear directly from those who have experienced the journey firsthand and see how AI-driven insights can make a lasting impact on professional growth.
                 </p>
+
+                <div className="flex justify-center md:mt-[50px] sm:mt-[30px]">
+                    <button className="h-12 bg-secondary hover:bg-secondary-dark text-white px-8 py-2 rounded-full text-sm font-bold transition-colors duration-200">
+                        READ OUR SUCCESS STORIES
+                    </button>
+                </div>
             </div>
         </section>
     );

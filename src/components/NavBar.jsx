@@ -31,28 +31,28 @@ const Header = () => {
       <div
         className={`transition-all duration-300 ${
           scrolled
-            ? "mx-0 rounded-none sm:px-[50px] md:px-[150px] top-0"
-            : "mx-4 sm:mx-[50px] md:mx-[150px] mt-[50px] rounded-xl px-6 sm:px-8 lg:px-12"
+            ? "mx-0 px-8 rounded-none sm:px-[50px] md:px-[150px] top-0"
+            : "mx-4 mx-[50px] md:mx-[150px] mt-[50px] rounded-xl px-6 sm:px-8 lg:px-12"
         } bg-white shadow-custom-nav flex items-center justify-between h-16`}
       >
-        <div className="flex items-center gap-4">
+        <div className="flex items-center mr-4">
           <img src={logo} alt="Logo" className="h-10 w-auto" />
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex flex-1 justify-center gap-8">
+        <nav className="hidden md:flex flex-1 justify-center gap-4 item-center">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className="text-sm font-semibold text-primary hover:text-[#DA2824] transition"
+              className="text-xs font-semibold text-primary hover:text-[#DA2824] transition"
             >
               {link.name}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden md:flex justify-end items-center gap-4">
+        <div className="hidden md:flex justify-end items-center ml-4">
           <Link
             to="/get-started"
             className="bg-primary text-white px-4 py-2 rounded-full text-sm transition hover:bg-red-700"

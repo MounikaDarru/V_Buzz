@@ -2,27 +2,55 @@ import React from "react";
 
 const ServiceCard = ({ image, icon, title, description, features}) => {
     return (
-        <div className="flex flex-col items-left bg-white rounded-[20px] md:w-[480px] md:h-[600px] shadow-custom-nav sm:w-[350px] sm:h-[500px] sm:gap-[15px]">
+        <div className="flex flex-col items-left bg-white rounded-[20px] max-w-[350px] mx-auto max-h[600px] sm:min-w-[250px] md:min-w-[400px] shadow-custom-nav">
             {/* image and icon */}
-            <div className="md:h-[300px]">
-                <img src={image} alt={title} className="md:rounded-tl-[200px] md:h-[265px] sm:rounded-tl-[150px]" />
-                <img src={icon} alt={title} className="md:ml-[35px] md:mt-[-35px] md:w-[70px] md:h-[70px] sm:w-[50px] sm:h-[50px] sm:ml-[25px] sm:mt-[-25px]"/>
+            <div>
+                <img src={image} alt={title} className="rounded-tl-[100px] sm:rounded-tl-[200px] sm:rounded-tl-[150px]" />
+                <img src={icon} alt={title} className="w-[30px] h-[30px] mt-[-15px] ml-[15px] md:ml-[25px] md:mt-[-25px] md:w-[50px] md:h-[50px]"/>
             </div>
 
             {/* Title and description */}
-            <div className="md:px-[30px] md:w-[420px] sm:px-[24px] sm:w-[350px]">
-                <h1 className="text-[16px] font-bold">{title}</h1>
-                <p className="text-[16px] font-medium">{description}</p>
-                <p className="line-clamp-4 text-sm text-black whitespace-pre-line md:ml-4 sm:ml-2">
+            <div className="flex flex-col p-6 w-full md:px-[30px] sm:px-[24px] gap-6">
+                <h1 className="text-xs sm:text-[16px] font-bold">{title}</h1>
+                <p className=" text-xs sm:text-[16px] font-medium">{description}</p>
+                <p className="line-clamp-3 text-xs sm:text-[16px] sm:line-clamp-4 text-black whitespace-pre-line md:ml-4 sm:ml-2 mt-[-15px]">
                 {features.map((item) => `• ${item.feature}`).join('\n')}
                 </p>
 
-                <button className="md:mt-[30px] sm:mt-[15px]">
-                    <u className="text-[#8AC5F8] text-[16px]">Read More..</u>
-                </button>
+                <u className="text-[#8AC5F8] text-xs sm:text-[16px]">Read More..</u>
             </div>
         </div>
     );
 };
 
 export default ServiceCard;
+
+
+// const ServiceCard = ({image, icon, title, description, features}) => {
+
+//     return (
+//         <div>
+//             {/* Image + Icon */}
+//             <div>
+//                 <img
+//                     src={image}
+//                     alt={title}
+//                     className="w-full h-full object-cover shrink-0 rounded-tl-[20px]"
+//                 />
+//                 <img
+//                     src={icon}
+//                     alt={title}
+//                     className="w-[30px] h-[30px] object-cover shrink-0 mt-[-15px]"
+//                 />
+//             </div>
+
+//             {/* Details */}
+//             <div>
+
+//             </div>
+//         </div>
+//     )
+
+// }
+
+// export default ServiceCard

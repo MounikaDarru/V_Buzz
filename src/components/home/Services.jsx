@@ -1,8 +1,10 @@
 import React from "react";
 import ServiceCard from "../cards/ServiceCard";
+import Button from "../Button";
 
 import service from "../../assets/service.png";
 import serviceicon from "../../assets/serviceicon.png";
+
 
 const servicesList = [
     {
@@ -68,11 +70,32 @@ const servicesList = [
             },
         ],
     },
+    {
+        id: 4,
+        image: service,
+        icon: serviceicon,
+        title: "Virtual Mock Interviews",
+        description: "Practice with industry experts and get personalized feedback to improve your interview skills.",
+        features: [
+            {
+                feature: "One-on-one sessions with corporate experts"
+            },
+            {
+                feature: "Industry-specific interview preparation"
+            },
+            {
+                feature: "Detailed feedback and improvement areas"
+            },
+            {
+                feature: "Interview recordings for self-review"
+            },
+        ],
+    },
 ]
 
 const Services = () => {
   return (
-    <section className="bg-primary/10 font-poppins px-4 sm:px-8 md:px-[150px] py-12 md:py-20 md:mt-[100px] sm:mt-[50px] sm:px-[50px]">
+    <section className="bg-primary/10 font-poppins px-[50px] sm:px-8 md:px-[150px] py-12 md:py-20 md:mt-[100px] sm:mt-[50px] sm:px-[50px] items-center justify-center">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <div className="flex items-center gap-2 justify-center">
           <div className="w-[15px] h-[2px] bg-secondary"></div>
@@ -89,8 +112,8 @@ const Services = () => {
           Our Promise :  With AI-driven insights, industry expertise, and a commitment to excellence, we empower individuals to achieve their career aspirations and unlock new opportunities globally.
         </p>
 
-        <div className="w-full overflow-x-auto hide-scrollbar">
-            <div className="flex flex-row md:gap-x-[30px] sm:gap-x-[20px] sm:gap-y-[20px] mt-[50px]">
+        <div className="w-full md:overflow-x-auto hide-scrollbar">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:gap-x-[30px] gap-y-[15px] sm:gap-x-[15px] mt-[50px] items-center min-w-[200px]">
                 {servicesList.map((service) => (
                 <ServiceCard
                     key={service.id}
@@ -105,10 +128,8 @@ const Services = () => {
         </div>
 
 
-        <div className="flex justify-center md:mt-[50px] sm:mt-[30px]">
-          <button className="h-12 bg-secondary hover:bg-secondary-dark text-white px-8 py-2 rounded-full text-sm font-bold transition-colors duration-200">
-            EXPLORE OUR SERVICES
-          </button>
+        <div className="justify-center mt-6">
+            <Button text="Explore Our Services" className="max-w-[300px]"/>
         </div>
       </div>
     </section>

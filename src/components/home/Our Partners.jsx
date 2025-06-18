@@ -6,25 +6,25 @@ import partner3 from '../../assets/partner3.png'
 
 const OurPartners = () => {
     return(
-        <section className="bg-white font-poppins px-4 sm:px-8 md:px-[150px] sm:px-[50px] md:mt-[100px] sm:mt-[50px] md:mb-[100px] sm:mb-[50px]">
-            <div className="md:flex md:flex-row md:items-center md:gap-[50px] sm:flex sm:flex-col sm:gap-[30px]">
-                <div className="flex flex-col gap-4 md:w-[450px] md:w-[550px] md:items-start sm:items-center sm:mt-[30px]">
+        <section className="bg-white font-poppins px-[50px] md:px-[150px] md:py-[75px] py-[50px] sm:items-center">
+            <div className="lg:flex lg:flex-row sm:items-center lg:gap-[50px] sm:flex sm:flex-col sm:gap-[30px]">
+                <div className="flex flex-col gap-4 lg:min-w-[350px] lg:max-w-[550px] lg:items-start sm:items-center sm:mt-[30px]">
                     <div className="flex items-center gap-2">
                         <div className="w-[15px] h-[2px] bg-secondary"></div>
                         <h6 className="text-[16px] font-semibold text-black">OUR PARTNERS</h6>
                     </div>
 
-                    <h1 className="w-full md:w-[450px] text-[24px] font-bold text-black md:text-left sm:text-center">
+                    <h1 className="w-full text-[24px] font-bold text-black lg:text-left sm:text-center">
                         Strengthening Careers Through Strategic{' '}
                         <span className="text-primary font-bold">Partnerships</span> and Innovation
                     </h1>
 
-                    <p className="w-full md:w-[450px] text-[16px] font-medium text-black text-justify">
+                    <p className="w-full text-[16px] font-medium text-black text-justify">
                         Collaborating with industry leaders to drive growth, technology, and career success.   We build strong alliances to provide cutting-edge solutions and AI-driven insights.   Our partnerships enhance career opportunities through strategic networking and expertise.   Together, we empower individuals with technology, mentorship, and global connections.   Join us in shaping a future where partnerships unlock limitless possibilities.
                     </p>
                 </div>
 
-                <div className="flex flex-col gap-[30px] md:w-[480px]">
+                <div className="flex flex-col max-w-[540px] gap-[30px] lg:min-w-[350px] lg:max-w-[540px] mt-6">
                     <div className="overflow-x-auto hide-scrollbar w-full">
                         <div className="flex gap-4">
                             <button className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">

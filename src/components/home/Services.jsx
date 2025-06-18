@@ -96,13 +96,13 @@ const servicesList = [
 const Services = () => {
   return (
     <section className="bg-primary/10 font-poppins px-[50px] sm:px-8 md:px-[150px] py-12 md:py-20 md:mt-[100px] sm:mt-[50px] sm:px-[50px] items-center justify-center">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
-        <div className="flex items-center gap-2 justify-center">
+      <div className="max-w-7xl mx-auto flex flex-col items-left md:text-center">
+        <div className="flex items-center gap-2 md:justify-center">
           <div className="w-[15px] h-[2px] bg-secondary"></div>
           <h6 className="text-[16px] font-semibold text-black">OUR SERVICES</h6>
         </div>
 
-        <h1 className="w-full max-w-[550px] text-[24px] md:text-[28px] font-bold text-black text-center mt-4">
+        <h1 className="w-full max-w-[550px] text-[24px] md:text-[28px] font-bold text-black text-left md:text-center mt-4">
           AI-Driven Career & Education Services: Expert{' '}
           <span className="text-primary font-bold">Guidance</span> for Success
         </h1>
@@ -128,7 +128,7 @@ const Services = () => {
         </div>
 
 
-        <div className="justify-center mt-6">
+        <div className="justify-center items-center mt-6">
             <Button text="Explore Our Services" className="max-w-[300px]"/>
         </div>
       </div>

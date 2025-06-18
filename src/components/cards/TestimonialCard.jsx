@@ -3,8 +3,8 @@ import React from "react";
 const TestimonialCard = ({ name, username, image, icon, testimonial, height }) => {
   return (
     <div
-      className={`group sm:w-[300px] md:w-[200px] sm:h-[300px] md:h-auto [perspective:1000px] flex items-center justify-center`}
-      style={{ height: height || undefined }} // Optional override for larger screens
+      className={`group min-w-[200px] sm:min-w-[250px] sm:min-gap-[30px] lg:min-w-[170px] [perspective:1000px] flex items-center justify-center`}
+      style={{ height: height || undefined }}
     >
       <div className="relative w-full h-full transition-transform duration-700 flip-container flip-hover">
         

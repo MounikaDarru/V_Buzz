@@ -1,10 +1,78 @@
 import React from "react";
+import { useState } from "react";
 
 import partner1 from '../../assets/partner1.png'
 import partner2 from '../../assets/partner2.png'
 import partner3 from '../../assets/partner3.png'
 
+const partners = [
+    {
+        id: 1,
+        category: "University Partners",
+        image: partner1
+    },
+    {
+        id: 2,
+        category: "Coorperate Partners",
+        image: partner2
+    },
+    {
+        id: 3,
+        category: "Category 3",
+        image: partner3
+    },
+    {
+        id: 4,
+        category: "University Partners",
+        image: partner1
+    },
+    {
+        id: 5,
+        category: "Coorperate Partners",
+        image: partner2
+    },
+    {
+        id: 6,
+        category: "University Partners",
+        image: partner3
+    },
+    {
+        id: 7,
+        category: "University Partners",
+        image: partner1
+    },
+    {
+        id: 8,
+        category: "Coorperate Partners",
+        image: partner2
+    },
+    {
+        id: 9,
+        category: "Category 3",
+        image: partner2
+    },
+]
+
+const categories = [
+  "University Partners",
+  "Coorperate Partners",
+  "Category 3",
+  "Category 4",
+  "Category 5",
+  "Category 6",
+];
+
+
 const OurPartners = () => {
+
+    const [filter, setFilter] = useState("University Partners");
+
+    const handleClick = (category) => {
+        setFilter(category);
+    }
+
+    const filteredPartners = partners.filter(item => item.category === filter);
+
     return(
         <section className="bg-white font-poppins px-[50px] md:px-[150px] md:py-[75px] py-[50px] sm:items-center">
             <div className="lg:flex lg:flex-row sm:items-center lg:gap-[50px] sm:flex sm:flex-col sm:gap-[30px]">
@@ -27,58 +95,37 @@ const OurPartners = () => {
                 <div className="flex flex-col max-w-[540px] gap-[30px] lg:min-w-[350px] lg:max-w-[540px] mt-6">
                     <div className="overflow-x-auto hide-scrollbar w-full">
                         <div className="flex gap-4">
-                            <button className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
-                            University Partners
-                            </button>
-                            <button className="bg-gray-100 text-black px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
-                            Coorperate Partners
-                            </button>
-                            <button className="bg-gray-100 text-black px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
-                            Category 3
-                            </button>
-                            <button className="bg-gray-100 text-black px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
-                            category 4
-                            </button>
-                            <button className="bg-gray-100 text-black px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
-                            category 5
-                            </button>
-                            <button className="bg-gray-100 text-black px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
-                            category 6
-                            </button>
+                            {categories.map((category) => {
+                                const isActive = filter === category;
+
+                                return (
+                                    <button
+                                    key={category}
+                                    className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors duration-200 ${
+                                        isActive
+                                        ? 'bg-primary text-white'
+                                        : 'bg-primary/10 text-black'
+                                    }`}
+                                    onClick={() => handleClick(category)}
+                                    >
+                                    {category}
+                                    </button>
+                                );
+                            })}
                         </div>
                     </div>
 
                     <div className="grid grid-cols-3 gap-x-[15px] gap-y-[15px]">
-                        <img
-                            src={partner1}
-                            alt="partner"
-                            className="w-full h-full object-cover"
-                        />
-                        <img
-                            src={partner2}
-                            alt="partner"
-                            className="w-full h-full object-cover"
-                        />
-                        <img
-                            src={partner3}
-                            alt="partner"
-                            className="w-full h-full object-cover"
-                        />
-                        <img
-                            src={partner1}
-                            alt="partner"
-                            className="w-full h-full object-cover"
-                        />
-                        <img
-                            src={partner2}
-                            alt="partner"
-                            className="w-full h-full object-cover"
-                        />
-                        <img
-                            src={partner3}
-                            alt="partner"
-                            className="w-full h-full object-cover"
-                        />
+                        {
+                            filteredPartners.map((item, index) => (
+                                <img
+                                    key={index}
+                                    src={item.image}
+                                    alt="partner"
+                                    className="w-full h-full object-cover"
+                                />
+                            ))
+                        }
                     </div>
                 </div>
             </div>

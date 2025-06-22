@@ -12,6 +12,7 @@ export default {
       },
       boxShadow: {
         'custom-nav': '0 0 20px rgba(0, 0, 0, 0.10)',
+        'custom-field': '0 0 10px rgba(0, 0, 0, 0.10)',
       },
       colors: {
         primary: "#1E5D9A",

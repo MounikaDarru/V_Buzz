@@ -210,9 +210,9 @@ const OurTeam = () => {
       <h1 className='text-[24px] text-white font-bold'>Meet the Experts Behind VCBIL   Driving Innovation, Mentorship, and Career Success</h1>
       <p className='text-[16px] text-white/60 font-medium mt-[15px]'>Our team consists of industry leaders, academic experts, bureaucrats, and diplomats who are committed to helping you achieve your career goals.</p>
 
-      <div className='flex flex-col sm:flex-row mt-[50px]'>
+      <div className='flex flex-col gap-[50px] mt-[50px]'>
         {/* Categories */}
-        <div className="sm:hidden overflow-x-auto hide-scrollbar rounded-full justify-center items-center">
+        <div className="overflow-x-auto hide-scrollbar rounded-full justify-center items-center">
           <div className="bg-white flex justify-between">
             {categories.map((category) => {
               const isActive = filter === category;
@@ -234,15 +234,15 @@ const OurTeam = () => {
           </div>
         </div>
 
-        <div className="hidden sm:flex overflow-x-auto w-[100px] h-[400px] justify-center items-center">
-          <div className="bg-white rounded-full inline-flex overflow-x-auto hide-scrollbar justify-between transform -rotate-90">
+        {/* <div className="hidden sm:block">
+          <div className="bg-white flex flex-col gap-8 w-[100px] h-[400px] overflow-x-auto hide-scrollbar rounded-full">
             {categories.map((category) => {
               const isActive = filter === category;
 
               return (
                 <button
                   key={category}
-                  className={`px-8 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-200 ${
+                  className={`w-full px-8 py-4 text-sm font-medium whitespace-nowrap transform rotate-90 transition-colors duration-200 ${
                     isActive
                       ? 'bg-[#595959] text-white'
                       : 'bg-white text-black'
@@ -254,10 +254,10 @@ const OurTeam = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Members */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 sm:gap-x-[15px] sm:gap-y-[30px] gap-y-[15px] mt-[50px] justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-[15px] sm:gap-y-[30px] gap-y-[15px] mt-[50px] justify-items-center">
           {filteredMembers.map((member, index) => (
             <TeamMemberCard
               key={index}

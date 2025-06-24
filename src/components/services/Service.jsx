@@ -3,7 +3,7 @@ import service from '../../assets/service.png'
 
 const Service = () => {
   return (
-    <section className='flex flex-col gap-[50px] px-[50px] md:px-[150px]'>
+    <section className='flex flex-col gap-[50px] px-[50px] md:px-[150px] pb-[25px] md:pb-[75px]'>
         <div className='flex flex-col lg:flex-row gap-[24px] lg:gap-[50px]'>
             <img src={service} className="min-w-[200px] lg:min-w-[350px] rounded-[20px]"/>
             <div className='flex flex-col gap-[15px] lg:max-w-[600px]'>

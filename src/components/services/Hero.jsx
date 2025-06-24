@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="absolute w-full h-full bg-primary/10 ">
+    <section className="absolute w-full h-full bg-primary/10">
       {/* Top Heading Section */}
       <div className="relative z-10 px-[50px] md:px-[150px] pt-[150px] pb-[100px]">
         <div className="flex flex-col gap-4 max-w-[660px]">

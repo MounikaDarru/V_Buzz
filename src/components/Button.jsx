@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Button = ({ 
   text = "Get Started", 
-  to = "/get-started",
+  to,
   bgColor = "bg-secondary",
   textColor = "text-white",
   className = ""

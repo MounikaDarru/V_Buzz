@@ -1,9 +1,9 @@
 import React from 'react'
 
-import NavBar from '../components/NavBar'
-import Hero from '../components/services/Hero'
-import Service from '../components/services/Service'
-import FAQs from '../components/services/FAQ\'s'
+import NavBar from '../../components/NavBar'
+import Hero from '../../components/services/Hero'
+import Service from '../../components/services/Service'
+import FAQs from '../../components/services/FAQ\'s'
 
 const Services = () => {
   return (

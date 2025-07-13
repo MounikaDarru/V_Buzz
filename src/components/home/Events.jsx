@@ -5,6 +5,8 @@ import speaker1 from '../../assets/speaker1.png'
 import speaker2 from '../../assets/speaker2.png'
 import speaker3 from '../../assets/speaker3.png'
 
+import Button from "../Button"
+
 const eventsList = [
   {
     id: 1,

@@ -39,7 +39,7 @@ const EventCard = ({ image, title, date, time, location, speakers = [] }) => {
 
         {/* Register + Speakers */}
         <div className="flex flex-row lg:flex-col justify-between items-center lg:items-left lg:justify-left">
-          <Button text="Register" bgColor="white" textColor="text-primary" className="border border-primary"/>
+          <Button text="Register" bgColor="white" textColor="text-primary" className="border border-primary" to="/event-info"/>
 
           <div className="flex flex-row">
             {speakers.map((speaker, index) => (

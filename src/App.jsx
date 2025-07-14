@@ -5,6 +5,7 @@ import AboutUs from "./pages/AboutUs";
 import Services from "./pages/services/Services";
 import Events from "./pages/events/Events";
 import EventInfo from "./pages/events/EventInfo";
+import Testimonials from "./pages/Testimonials";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Route path="/events" element={<Events />} />
       <Route path="/event-info" element={<EventInfo />} />
       <Route path="/institute-boarding" element={<InstituteBoarding />} />
+      <Route path="/testimonials" element={<Testimonials />} />
     </Routes>
   )
 }

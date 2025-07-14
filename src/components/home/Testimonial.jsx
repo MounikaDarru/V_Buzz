@@ -134,7 +134,7 @@ const Testimonial = () => {
                 </p>
 
                 <div className="justify-center items-center mt-6">
-                    <Button text="Read our success Stories" className="max-w-[300px]"/>
+                    <Button text="Read our success Stories" to={"/testimonials"} className="max-w-[300px]"/>
                 </div>
             </div>
         </section>

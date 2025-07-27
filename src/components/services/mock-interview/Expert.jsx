@@ -75,7 +75,8 @@ const Expert = () => {
                 <Button 
                     text="View More" 
                     textColor="text-primary" 
-                    className="bg-primary/0 border-primary border-[2px] px-[30px]"
+                    bgColor = "bg-primary/0"
+                    className="border-primary border-[2px] px-[30px]"
                 />
             </div>
         </section>

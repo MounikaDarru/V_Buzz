@@ -59,7 +59,7 @@ const Hero = () => {
         <section className='flex flex-col bg-primary/90 font-poppins px-[50px] md:px-[150px] items-center text-center text-white'>
             <h1 className='font-bold text-[36px] pt-[150px]'>Ready to Ace Your Next Interview?</h1>
             <p className='font-medium text-[16px] mt-[15px] max-w-[400px]'>Get personalized feedback from industry experts with live mock sessions</p>
-            <Button text='Book a Mock interview Today!' className='border border-2 border-white bg-primary/0 mt-[30px] my-[50px] max-w-[350px]'/>
+            <Button text='Book a Mock interview Today!' bgColor="bg-primary/0" className='border border-2 border-white mt-[30px] my-[50px] max-w-[350px]'/>
         </section>
 
         <section className='px-[50px] md:px-[150px] my-[50px]'>

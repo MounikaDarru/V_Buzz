@@ -95,7 +95,7 @@ const categories = [
 
 const Testimonials = () => {
 
-    const [filter, setFilter] = useState("University Partners");
+    const [filter, setFilter] = useState("Student");
     
         const handleClick = (category) => {
             setFilter(category);

@@ -34,7 +34,7 @@ const OurMission = () => {
                     </p>
 
                     <div className="justify-center mt-6">
-                        <Button text="Join Us" className="max-w-[150px]"/>
+                        <Button text="Join Us" to="/institute-boarding" className="max-w-[150px]"/>
                     </div>
                 </div>
             </div>

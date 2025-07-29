@@ -9,6 +9,7 @@ import Testimonials from "./pages/Testimonials";
 import MockInterview from "./pages/services/mock interview/MockInterview";
 import Interview from "./pages/services/mock interview/Interview";
 import StudentLogin from "./pages/login/StudentLogin";
+import Analysis from "./pages/services/mock interview/Analysis";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Route path="/services" element={<Services />} />
       <Route path="/services/mock-interviews" element={<MockInterview />} />
       <Route path="/services/mock-interviews/interview" element={<Interview />} />
+      <Route path="/services/mock-interviews/analysis" element={<Analysis />} />
       <Route path="/events" element={<Events />} />
       <Route path="/event-info" element={<EventInfo />} />
       <Route path="/login/student" element={<StudentLogin />} />
